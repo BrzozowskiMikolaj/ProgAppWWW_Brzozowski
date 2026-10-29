@@ -1,11 +1,24 @@
 :root {
-    --kolor-akcent: #1E3A8A;
-    --kolor-tla-karty: #FFFFFF;
+    --kolor-tla: #F8FAFC;
     --kolor-tekstu: #0F172A;
+    --kolor-tla-karty: #FFFFFF;
+    --kolor-tla-pola: #FFFFFF;
+    --kolor-akcent: #1E3A8A;
+    --kolor-ramki: #D1D5DB;
+}
+
+[data-theme="dark"] {
+    --kolor-tla: #0F172A;
+    --kolor-tekstu: #F8FAFC;
+    --kolor-tla-karty: #1E293B;
+    --kolor-tla-pola: #1E293B;
+    --kolor-akcent: #475569;
+    --kolor-ramki: #60A5FA;
 }
 
 body {
-    background-color: #F8FAFC;
+    background-color: var(--kolor-tla);
+    color: var(--kolor-tekstu);
 }
 
 .katalog {
@@ -45,18 +58,20 @@ img {
 }
 
 input, select, textarea {
+    background-color: var(--kolor-tla-pola);
+    color: var(--kolor-tekstu);
     width: 100%;
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--kolor-ramki);
     border-radius: 15px;
 }
 
 .karta {
     background-color: var(--kolor-tla-karty);
     color: var(--kolor-tekstu);
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--kolor-ramki);
     border-radius: 15px;
     padding: 10px;
     text-align: center;
@@ -70,4 +85,8 @@ a:hover, button:hover {
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 3px solid var(--kolor-akcent);
     outline-offset: 4px;
+}
+
+[hidden] {
+    display: none !important;
 }

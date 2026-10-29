@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+
 
 </head>
 <body>
 <header>
     <h1>Sklep Motoryzacyjny</h1>
+    <button type="button" id="theme-button" aria-pressed="false">Tryb ciemny</button>
     <nav>
         <a href="index.html">Katalog</a>
         <a href="produkt.html">Produkt</a>
@@ -18,8 +21,8 @@
 </header>
 <main>
     <h2>Formularz zapytania</h2>
-    <p>Formularz demonstracyjny. Dane pojawią się w adresie strony; zapytanie nie zostanie zapisane ani wysłane e-mailem</p>
-    <form method="get" action="kontakt.html">
+    <p>Podgląd lokalny. Formularz nie wysyła wiadomości.</p>
+    <form id="formularz-kontaktowy">
         <label for="email"> Adres e-mail (wymagane): </label>
         <input id="email" type="email" name="email" required>
         <label for="produkt">Wybierz produkt (wymagane): </label>
@@ -31,11 +34,21 @@
         </select>
         <label for="ilosc">Liczba sztuk (od 1 do 5, wymagane):</label>
         <input id="ilosc" type="number" name="ilosc" required min="1" max="5" step="1">
+        <p id="wartosc-obliczona"></p>
         <label for="wiadomosc">Treść wiadomości(10-500 znaków, wymagane):</label>
         <textarea id="wiadomosc" name="wiadomosc" required minlength="10" maxlength="500"></textarea>
+        <p id="blad-wiadomosci" style="color: red;" hidden></p>
         <button type="submit">Sprawdź zapytanie</button>
 
     </form>
+    
+    <section id="podsumowanie-wysylki" hidden>
+        <h3>Podsumowanie zapytania:</h3>
+        <p>Produkt: <span id="out-produkt"></span></p>
+        <p>Ilość: <span id="out-ilosc"></span></p>
+        <p>Wartość: <span id="out-wartosc"></span></p>
+        <p>Wiadomość: <span id="out-wiadomosc"></span></p>
+    </section>
 </main>
 <footer>
     <p>&copy; 2026 Sklep. Wykonał: Mikołaj Brzozowski</p>

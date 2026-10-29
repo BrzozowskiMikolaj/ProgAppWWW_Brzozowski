@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 
 </head>
 <body>
 <header>
+    <button type="button" id="theme-button" aria-pressed="false">Tryb ciemny</button>
     <h1>Sklep Motoryzacyjny</h1>
     <nav>
         <a href="index.html" aria-current="page">Katalog</a>
@@ -18,6 +20,17 @@
 </header>
 <main>
     <h2>Strona główna</h2>
+    <p id="zegar-wyswietlacz"></p>
+    <button type="button" id="start-zegara">Start zegara</button>
+    <button type="button" id="stop-zegara">Stop zegara</button>
+    <section class="wyszukiwarka-produktow">
+        <label for="szukaj-produktu">Szukaj produktu:</label>
+        <input type="search" id="szukaj-produktu" placeholder="Wpisz nazwę...">
+        <div aria-live="polite" id="obszar-komunikatow">
+            <p>Liczba wyników: <span id="licznik-wynikow"></span></p>
+            <p id="brak-wynikow" hidden>Brak produktów pasujących do wyszukiwania.</p>
+        </div>
+    </section>
     <div class="katalog">
         <article class="karta">
             <h3>Klucz Milwaukee M18 ONEFHIWF12-502X</h3>
