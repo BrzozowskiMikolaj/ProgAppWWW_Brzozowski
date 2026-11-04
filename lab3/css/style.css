@@ -90,3 +90,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 [hidden] {
     display: none !important;
 }
+
+.sekcja_demo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 360px;
+    gap: 10px;
+}
+
+.sekcja_demo .przycisk_animowany {
+    width: 160px;
+    height: 90px;
+    box-sizing: border-box;
+}

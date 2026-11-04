@@ -6,6 +6,8 @@
     <title>Sklep</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <script src="vendor/jquery-4.0.0.min.js" defer></script>
+    <script src="js/lab3.js" defer></script>
 
 </head>
 <body>
@@ -54,6 +56,15 @@
             <p>105,99 PLN</p>
         </article>
     </div>
+    <section class="sekcja_demo">
+        <button type="button" class="przycisk_animowany" id="przycisk_1">Przycisk 1</button>
+        <button type="button" class="przycisk_animowany" id="przycisk_2">Przycisk 2</button>
+        <button type="button" class="przycisk_animowany" id="przycisk_3">Przycisk 3</button>
+        <p id="status_krokow" role="status">Liczba kroków: 0</p>
+        <button type="button" id="przycisk_reset">Resetuj A i C</button>
+        <button type="button" id="przycisk_sprawdz">Sprawdź serwer</button>
+        <p id="wynik_serwera" role="status">Oczekuję na sprawdzenie...</p>
+    </section>
 </main>
 <footer>
     <p>&copy; 2026 Sklep. Wykonał: Mikołaj Brzozowski</p>
